@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Assignment 4">
+
+  <title>Maps</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<!--
+  ** Create a Web page with a map, either static or slippy, using the API of your choice.
+  ** Create a little form that allows the user to choose the location and zoom level. This could be input boxes for entering latitude, longitude, and zoom. Or it could be a menu (select, radio buttons, or something similar) of places you find interesting.
+  ** When the user chooses a location, change the map accordingly. If you are using a slippy map, there are built-in functions to do this. If a static map, build the new URL string and use jQuery's attr()function to set the src attribute.
+-->
+<body>
+  <h1>Inputs</h1>
+  <br/>
+  <h3>Zoom:</h3>
+  <form id="inputForm">
+    <input type="range" id="rangeInput" min="0" max="20">
+  </form>
+  <h3>Choose a location:</h3>
+  <br/>
+  <select id="selectInput">
+    <option value="seattle" selected>Seattle, WA</option>
+    <option value="baltra">Baltra, Ecuador</option>
+    <option value="paris">Paris, France</option>
+    <option value="sondrestrom">Sondestrom, Greenland</option>
+    <option value="tokyo">Tokyo, Japan</option>
+    <option value="random">Random location</option>
+  </select>
+  <br/><br/><br/>
+  <div id="map"></div>
+  
+  <!-- JavaScript -->
+  <!-- jQuery at http://code.jquery.com/ -->
+  <script
+    src="http://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+    crossorigin="anonymous"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBQeiRvKeH6EBeQ_BAOEjRXAvZMBBknPtg&callback=initMap" async defer></script>
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
